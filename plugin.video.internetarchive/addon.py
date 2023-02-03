@@ -579,9 +579,9 @@ def ia_search():
     if (keyb.isConfirmed()):
         search = urllib_parse.quote_plus(keyb.getText())
         xbmc.log('SEARCH: ' + search, level=log_level)
-        # https://archive.org/search.php?query=%28commodore%29%20AND%20mediatype%3A%28movies%29
-        url = 'https://archive.org/search.php?query=' + search + '%20AND%20mediatype%3Amovies'  # + sort_value[1:] #+ '&page=1' #+ '?sort=-addeddate'
-        # url = 'https://archive.org/search.php?query=' + search + '&and[]=mediatype%3A%22movies%22&page=1'
+        # https://archive.org/search?query=%28commodore%29%20AND%20mediatype%3A%28movies%29
+        url = 'https://archive.org/search?query=' + search + '%20AND%20mediatype%3Amovies'  # + sort_value[1:] #+ '&page=1' #+ '?sort=-addeddate'
+        # url = 'https://archive.org/search?query=' + search + '&and[]=mediatype%3A%22movies%22&page=1'
         xbmc.log('SEARCH_URL: ' + url, level=log_level)
         ia_search_video(url)
     else:
